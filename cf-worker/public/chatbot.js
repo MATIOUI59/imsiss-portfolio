@@ -13,23 +13,27 @@
         },
         {
             keywords: ['who', 'yourself', 'name', 'intro', 'mouad'],
-            answer: "👨‍💻 I'm **Mouad Matioui** — a final year Cybersecurity student at the University of Hertfordshire (3.72 CGPA, First Class), currently working as an **AI Junior Solutions Analyst at Immunocore**. My work sits at the intersection of technical security, compliance, and information assurance — the same intersection of technology, policy and strategy that IMSISS trains its graduates in."
+            answer: "👨‍💻 I'm **Mouad Matioui** — a cybersecurity graduate from the University of Hertfordshire (4.06 CGPA, First Class), now working as a **Graduate Engineer at LMAX Group**. I bring a technical practitioner's perspective — developed across a graduate engineering role in fintech and an industrial placement in cybersecurity and compliance — to the interdisciplinary study of security, intelligence, and strategic studies."
         },
         {
             keywords: ['education', 'university', 'degree', 'study', 'studied', 'school', 'hertfordshire', 'gpa', 'cgpa', 'grade', 'baccalaureate'],
-            answer: "🎓 **Education**\n- University of Hertfordshire (2022-2026) — BSc Cybersecurity, First Class Honours, 3.72 CGPA. Selected as Teaching Assistant.\n- French Baccalaureate (2018-2021) — Math & Economics, 87%."
+            answer: "🎓 **Education**\n- University of Hertfordshire (2022-2026) — BSc (Hons) Computer Science (Cyber Security and Networks), First Class Honours, 4.06 CGPA. Selected as Teaching Assistant.\n- French Baccalaureate (2018-2021) — Math & Economics, 87%."
         },
         {
-            keywords: ['experience', 'work', 'job', 'career', 'immunocore', 'internship', 'intern', 'current', 'role', 'trajectory'],
-            answer: "💼 **Experience**\n- AI Junior Solutions Analyst @ Immunocore (Sep 2025-Present) — fine-tunes AI models (+30% accuracy), audit-ready documentation.\n- Cyber Security Intern @ Immunocore (Sep 2024-Sep 2025) — automated onboarding via Python/Graph API (-50% manual work), ISO 27001 compliance.\n- Teaching Assistant @ University of Hertfordshire (2023-2024) — assembly/C labs."
+            keywords: ['experience', 'work', 'job', 'career', 'immunocore', 'lmax', 'internship', 'intern', 'current', 'role', 'trajectory'],
+            answer: "💼 **Experience**\n- Graduate Engineer @ LMAX Group (Jun 2026-Present) — security engineering, IaC, and AI risk assessment protecting critical financial infrastructure.\n- AI Junior Solutions Analyst @ Immunocore (Sep 2025-Mar 2026) — AI governance and risk assessment, +30% predictive accuracy.\n- Technology Placement Student @ Immunocore (Sep 2024-Sep 2025) — information security governance, ISO 27001 & GDPR audit prep.\n- Teaching Assistant @ University of Hertfordshire (2023-2024) — assembly/C labs, 95% highest cohort mark."
         },
         {
-            keywords: ['skill', 'skills', 'tech', 'technology', 'stack', 'expertise', 'python', 'cryptography', 'security', 'active directory', 'gdpr'],
-            answer: "🛠️ **Core skills**\n- Python & Bash scripting\n- Active Directory security\n- ISO 27001 & GDPR compliance\n- AI model fine-tuning\n- Cryptography & secure networking\n- Risk & compliance analysis"
+            keywords: ['skill', 'skills', 'tech', 'technology', 'stack', 'expertise', 'python', 'cryptography', 'security', 'active directory', 'gdpr', 'governance'],
+            answer: "🛠️ **Core skills**\n- Information security governance\n- Regulatory compliance (ISO 27001, GDPR)\n- Risk assessment & AI/ML security\n- Network security & cryptography\n- Digital forensics\n- Cross-cultural communication"
         },
         {
             keywords: ['project', 'projects', 'lab', 'labs', 'portfolio', 'built', 'compliance automater', 'vpn'],
-            answer: "🚀 **Featured projects**\n- **Compliance Automater** — Python + Graph API tool for ISO 27001 audits on Active Directory.\n- **VPN Protocol Analysis** — resilience of VPN protocols against post-quantum attacks.\n- **AI Security Audit** — framework to assess bias & data-leakage risk in ML models."
+            answer: "🚀 **Featured projects**\n- **Compliance Automater** — Python + Graph API tool for ISO 27001 audits on Active Directory.\n- **VPN Protocol Analysis** — final year research on next-gen VPN protocols and post-quantum readiness, relevant to critical infrastructure and digital resilience.\n- **AI Security Audit** — framework to assess bias & data-leakage risk in ML models."
+        },
+        {
+            keywords: ['certification', 'certifications', 'cert', 'certs', 'az-900', 'az900', 'sc-900', 'sc900', 'security+', 'comptia', 'udemy', 'badge'],
+            answer: "🎖️ **Certifications**\n- Microsoft Azure Fundamentals (AZ-900) — Completed\n- Microsoft Security, Compliance, and Identity Fundamentals (SC-900) — Completed\n- CompTIA Security+ — In Progress\n- Additional Udemy certifications — coming soon"
         },
         {
             keywords: ['contact', 'email', 'reach', 'hire', 'linkedin', 'connect', 'get in touch'],
@@ -55,7 +59,7 @@
 
     const FALLBACK = "🤔 I'm not totally sure about that one — but you can ask about my education, experience, skills, projects, or how to get in touch. Or email me directly at **matiouimouad9@gmail.com**.";
 
-    const SUGGESTIONS = ['Skills', 'Experience', 'Education', 'Projects', 'Contact'];
+    const SUGGESTIONS = ['Skills', 'Experience', 'Education', 'Projects', 'Certifications', 'Contact'];
 
     function findAnswer(rawInput) {
         const text = rawInput.toLowerCase();
