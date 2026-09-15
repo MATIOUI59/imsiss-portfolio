@@ -1,0 +1,28 @@
+# NOT DEPLOYED YET. Rename "site" below (and everything in ALLOWED_ORIGINS)
+# to whatever you decide when you're ready to push this live under its own
+# name — see README.md for the full first-deploy checklist.
+
+name = "site"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Create this KV namespace with `wrangler kv namespace create CONTACT_MESSAGES`
+# and paste the returned id below before first deploy.
+# [[kv_namespaces]]
+# binding = "CONTACT_MESSAGES"
+# id = "REPLACE_ME"
+
+[vars]
+# Add this project's real deployed URL(s) here once you know them, comma-separated.
+ALLOWED_ORIGINS = "http://localhost:8091,http://127.0.0.1:8091"
+
+# ANTHROPIC_API_KEY, TURNSTILE_SECRET_KEY and RESEND_API_KEY are NOT set here
+# (this file is committed to git). Set them as encrypted secrets instead:
+#   wrangler secret put ANTHROPIC_API_KEY
+#   wrangler secret put TURNSTILE_SECRET_KEY
+#   wrangler secret put RESEND_API_KEY
