@@ -447,6 +447,17 @@ textarea:focus-visible {
     gap: 8px;
 }
 
+.org-logo {
+    height: 26px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(19, 56, 98, 0.15);
+    border: 1px solid var(--border);
+    display: block;
+}
+
 .job-left .range {
     display: block;
     font-weight: 700;
