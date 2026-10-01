@@ -45,6 +45,17 @@ body::before {
 
 a { text-decoration: none; color: inherit; transition: 0.25s; }
 
+/* Inline SVG icons (replaces the Font Awesome webfont/CSS) — sized off the
+   current font-size like an icon font, width follows each glyph's own
+   aspect ratio instead of being forced square. */
+.icon {
+    display: inline-block;
+    height: 1em;
+    width: auto;
+    fill: currentColor;
+    vertical-align: -0.125em;
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -222,13 +233,13 @@ textarea:focus-visible {
     color: var(--navy-deep);
 }
 
-.text-link i {
+.text-link .icon {
     font-size: 12px;
     transition: transform 0.25s;
 }
 
 .text-link:hover { color: var(--blue); }
-.text-link:hover i { transform: translateX(4px); }
+.text-link:hover .icon { transform: translateX(4px); }
 
 .on-navy .text-link { color: #fff; }
 .on-navy .text-link:hover { color: var(--cyan); }
@@ -262,7 +273,7 @@ textarea:focus-visible {
     box-shadow: 0 8px 24px rgba(19, 56, 98, 0.06);
 }
 
-.scholarship-banner i {
+.scholarship-banner .icon {
     color: var(--blue);
     font-size: 24px;
 }
@@ -380,7 +391,7 @@ textarea:focus-visible {
 }
 
 .skills-list li { display: flex; align-items: center; gap: 8px; }
-.skills-list i { color: var(--blue); }
+.skills-list .icon { color: var(--blue); }
 
 .stats-wrapper {
     display: flex;
@@ -493,8 +504,8 @@ textarea:focus-visible {
     color: var(--text-light);
 }
 
-.job-left .location i,
-.job-left .mode i {
+.job-left .location .icon,
+.job-left .mode .icon {
     margin-right: 5px;
     color: var(--blue);
 }
@@ -628,7 +639,7 @@ footer {
 }
 
 footer p { margin-bottom: 10px; }
-footer i { color: var(--cyan); }
+footer .icon { color: var(--cyan); }
 
 .footer-sub { font-size: 13px; margin-top: 10px; }
 .footer-sub a { color: var(--cyan); }
