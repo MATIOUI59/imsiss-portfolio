@@ -112,6 +112,12 @@ textarea:focus-visible {
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 10px 30px -10px rgba(19, 56, 98, 0.15);
 }
 
 .nav-container {
