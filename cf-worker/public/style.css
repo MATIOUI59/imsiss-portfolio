@@ -493,6 +493,11 @@ textarea:focus-visible {
     color: var(--blue);
 }
 
+.job-right {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
 .job-right h4 {
     color: var(--heading);
     font-size: 1.25rem;
@@ -525,6 +530,27 @@ textarea:focus-visible {
 }
 
 .on-navy .job-right li::before { color: var(--cyan); }
+
+.cert-thumb-link {
+    display: inline-block;
+    margin-top: 14px;
+}
+
+.cert-thumb {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(19, 56, 98, 0.12);
+    transition: 0.25s;
+}
+
+.cert-thumb-link:hover .cert-thumb {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
 
 /* PROJECTS */
 .project-list {

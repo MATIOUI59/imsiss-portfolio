@@ -1,8 +1,4 @@
-# NOT DEPLOYED YET. Rename "site" below (and everything in ALLOWED_ORIGINS)
-# to whatever you decide when you're ready to push this live under its own
-# name — see README.md for the full first-deploy checklist.
-
-name = "site"
+name = "imsiss"
 main = "worker.js"
 compatibility_date = "2025-01-01"
 
@@ -11,15 +7,12 @@ directory = "./public"
 binding = "ASSETS"
 run_worker_first = true
 
-# Create this KV namespace with `wrangler kv namespace create CONTACT_MESSAGES`
-# and paste the returned id below before first deploy.
-# [[kv_namespaces]]
-# binding = "CONTACT_MESSAGES"
-# id = "REPLACE_ME"
+[[kv_namespaces]]
+binding = "CONTACT_MESSAGES"
+id = "6e6223d4e8fc456ba0c5a00c3052512a"
 
 [vars]
-# Add this project's real deployed URL(s) here once you know them, comma-separated.
-ALLOWED_ORIGINS = "http://localhost:8091,http://127.0.0.1:8091"
+ALLOWED_ORIGINS = "https://imsiss.mouadsec.workers.dev,http://localhost:8091,http://127.0.0.1:8091"
 
 # ANTHROPIC_API_KEY, TURNSTILE_SECRET_KEY and RESEND_API_KEY are NOT set here
 # (this file is committed to git). Set them as encrypted secrets instead:
