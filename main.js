@@ -74,16 +74,26 @@ observedSections.forEach(section => {
     navObserver.observe(section);
 });
 
-// Navbar shadow on scroll
+// Navbar shadow on scroll (rAF-throttled, only touches style on state
+// change, so it never adds work to every scroll frame)
 const navbar = document.querySelector('.navbar');
+let navbarScrolled = false;
+let scrollTicking = false;
+
+function updateNavbarShadow() {
+    const shouldShow = window.pageYOffset > 100;
+    if (shouldShow !== navbarScrolled) {
+        navbarScrolled = shouldShow;
+        if (navbar) navbar.classList.toggle('navbar-scrolled', shouldShow);
+    }
+    scrollTicking = false;
+}
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    if (navbar) {
-        navbar.style.boxShadow = currentScroll > 100
-            ? '0 10px 30px -10px rgba(19, 56, 98, 0.15)'
-            : 'none';
+    if (!scrollTicking) {
+        requestAnimationFrame(updateNavbarShadow);
+        scrollTicking = true;
     }
-});
+}, { passive: true });
 
 console.log('Portfolio loaded — Mouad Matioui');
